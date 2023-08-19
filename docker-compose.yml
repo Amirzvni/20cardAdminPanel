@@ -1,0 +1,11 @@
+version: '3'
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: userpanel:latest
+    ports:
+      - '3000:3000'
+    environment:
+      - REACT_APP_BASE_URL=http://185.172.2.179:8001/api
